@@ -1,0 +1,265 @@
+#developer-button[aria-hidden="true"] {
+  display: none !important;
+}
+
+#arc-developer-menu-button > .toolbarbutton-icon {
+  width: 16px;
+  height: 16px;
+}
+
+#arc-developer-toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  width: 100%;
+  height: 38px;
+  min-height: 38px;
+  padding: 3px 10px;
+  gap: 5px;
+  box-sizing: border-box;
+  background: var(--arc-developer-bg, var(--zen-tab-header-background, var(--zen-main-browser-background-toolbar, var(--toolbar-bgcolor)))) !important;
+  color: var(--arc-developer-fg, var(--zen-tab-header-foreground, var(--toolbox-textcolor, currentColor))) !important;
+  border-bottom: 1px solid color-mix(in srgb, currentColor 15%, transparent);
+  transition: background-color 140ms linear, color 140ms linear;
+  border-radius: 0;
+}
+
+#tabbrowser-tabbox:has(> #arc-developer-toolbar:not([hidden])) {
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 38px !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+
+#zen-tabbox-wrapper:has(#arc-developer-toolbar:not([hidden])),
+#tabbrowser-tabbox:has(> #arc-developer-toolbar:not([hidden])) > #tabbrowser-tabpanels {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+
+#arc-developer-toolbar[hidden] {
+  display: none !important;
+}
+
+#arc-developer-toolbar .arc-developer-action {
+  appearance: none !important;
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  min-height: 30px;
+  padding: 0;
+  border-radius: var(--toolbarbutton-border-radius, 7px);
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  color: inherit;
+  background: transparent !important;
+  background-image: none !important;
+  display: -moz-box;
+  -moz-box-align: center;
+  -moz-box-pack: center;
+}
+
+#arc-developer-toolbar .arc-developer-action > .toolbarbutton-text {
+  display: none !important;
+}
+
+#arc-developer-toolbar .arc-developer-action > .toolbarbutton-menu-dropmarker {
+  display: none !important;
+}
+
+#arc-developer-toolbar .arc-developer-action > .toolbarbutton-icon {
+  display: -moz-box !important;
+  box-sizing: border-box;
+  width: 18px !important;
+  height: 18px !important;
+  min-width: 18px;
+  min-height: 18px;
+  padding: 0 !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  background-image: none !important;
+  -moz-context-properties: fill, fill-opacity;
+  fill: var(--arc-developer-fg, currentColor) !important;
+  fill-opacity: 1 !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+#arc-developer-toolbar .arc-developer-action:hover > .toolbarbutton-icon,
+#arc-developer-toolbar .arc-developer-action:active > .toolbarbutton-icon,
+#arc-developer-toolbar .arc-developer-action:focus-visible > .toolbarbutton-icon {
+  fill: var(--arc-developer-fg, currentColor) !important;
+  fill-opacity: 1 !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+#arc-developer-toolbar .arc-developer-action:hover {
+  background: rgba(128, 128, 128, 0.22) !important;
+}
+
+#arc-developer-toolbar .arc-developer-action:active {
+  background: rgba(128, 128, 128, 0.32) !important;
+}
+
+#arc-developer-toolbar .arc-developer-action:focus-visible {
+  background: rgba(128, 128, 128, 0.22) !important;
+}
+
+#arc-developer-toolbar .arc-developer-divider {
+  align-self: center;
+  width: 1px;
+  min-width: 1px;
+  height: 18px;
+  margin-inline: 5px;
+  background: color-mix(in srgb, currentColor 25%, transparent);
+}
+
+#arc-developer-url {
+  min-width: 0;
+  max-width: 320px;
+  margin-inline: 8px;
+  font-size: 12px;
+  color: inherit;
+}
+
+#arc-developer-spacer {
+  min-width: 8px;
+}
+
+#arc-developer-actions {
+  min-width: 0;
+  max-width: 70%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+#arc-developer-actions > .arc-developer-action {
+  flex-shrink: 0;
+}
+
+#arc-portrait-panel {
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+#arc-portrait-panel .panel-arrowcontent,
+#arc-portrait-panel .panel-arrowcontainer {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+#arc-portrait-panel .arc-portrait-content {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  gap: 10px;
+}
+
+#arc-portrait-panel .arc-portrait-capture {
+  appearance: none !important;
+  min-height: 34px;
+  width: 100%;
+  margin: 0;
+  padding: 7px 12px !important;
+  border: 1px solid color-mix(in srgb, currentColor 24%, transparent) !important;
+  border-radius: 8px !important;
+  background: light-dark(#f4f4f6, #3a3d45) !important;
+  color: light-dark(#1b1d24, #f7f7f9) !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.18) !important;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#arc-portrait-panel .arc-portrait-capture:hover {
+  background: light-dark(#e9e9ed, #4a4e59) !important;
+}
+
+#arc-portrait-panel .arc-portrait-capture:active {
+  background: light-dark(#dddddf, #343740) !important;
+}
+
+#arc-portrait-panel .arc-portrait-preview {
+  display: block;
+  width: 320px;
+  height: auto;
+  border-radius: 9px;
+}
+
+#arc-portrait-panel .arc-portrait-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+#arc-portrait-panel .arc-portrait-swatch {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  padding: 3px;
+  border-radius: 50% !important;
+  border: 1px solid color-mix(in srgb, currentColor 35%, transparent);
+  box-shadow: 0 0 0 3px rgba(128, 128, 128, 0.14);
+  cursor: pointer;
+}
+
+#arc-portrait-panel .arc-portrait-swatch[aria-pressed="true"] {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+#arc-portrait-panel .arc-portrait-solid {
+  background: #f58073;
+}
+
+#arc-portrait-panel .arc-portrait-hue {
+  appearance: none;
+  flex: 1;
+  min-width: 0;
+  height: 22px;
+  background: transparent;
+}
+
+#arc-portrait-panel .arc-portrait-hue::-moz-range-track {
+  height: 9px;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #ff5555, #ffbb55, #ffff55, #55d877, #55bbff, #7755ff, #ff55cc, #ff5555);
+}
+
+#arc-portrait-panel .arc-portrait-hue::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: hsl(var(--arc-portrait-hue, 20) 90% 68%);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+}
+
+.tabbrowser-tab[arc-developer-active="true"] .tab-background {
+  position: relative !important;
+}
+
+.tabbrowser-tab[arc-developer-active="true"] .tab-background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  padding: 3px;
+  border-radius: var(--zen-border-radius, 10px);
+  background: repeating-linear-gradient(135deg, #f8d526 0 7px, #161616 7px 14px);
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}

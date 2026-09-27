@@ -1,0 +1,33 @@
+{
+  "id": "arc-developer-toolbar",
+  "name": "Arc-style Developer Toolbar",
+  "description": "Adds an Arc-style developer toolbar with Zen-native actions, screenshot Portrait mode, and per-tab persistence.",
+  "author": "12th-devs",
+  "version": "1.4.3",
+  "createdAt": "2026-09-27",
+  "updatedAt": "2026-09-27",
+  "homepage": "https://github.com/12th-devs/Arc-Developer-Toolbar",
+  "readme": "https://raw.githubusercontent.com/12th-devs/Arc-Developer-Toolbar/refs/heads/main/README.md",
+  "fork": ["zen"],
+  "tags": [
+    "developer tools",
+    "toolbar",
+    "arc"
+  ],
+  "style": {
+    "chrome": "chrome.css",
+    "content": ""
+  },
+  "scripts": {
+    "arc-developer-toolbar.uc.js": {
+      "name": "Arc-style Developer Toolbar",
+      "description": "Adds the developer toolbar and Portrait screenshot integration.",
+      "include": [
+        "chrome://browser/content/browser.xhtml"
+      ],
+      "loadOrder": 10
+    }
+  },
+  "preferences": "",
+  "no-updates": false
+}
